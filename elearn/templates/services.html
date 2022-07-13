@@ -1,0 +1,273 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avgamah | Learn From The Best</title>
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+  <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link href="{% static 'css/Avgamah_index.css' %}" rel="stylesheet">
+  <style>
+    body {
+      background-image: url("images/bg-texture.png");
+    }
+
+    .courses {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container nav__container">
+      <div class="logo">
+                        <img class="" src="{% static 'img/Avgamah-remove-bg.png' %}" alt="">
+      </div>
+      <ul class=" nav__menu">
+      <li> <a  href="{% url 'home' %}">Home</a></li>
+      <li> <a href="{% url 'about' %}">About Us</a> </li>
+      <li> <a class="active"  href="{% url 'services' %}">Courses</a> </li>
+      <li> <a href="{% url 'contact' %}">Contact Us</a> </li>
+      <li> <a href="{% url 'lsign' %}">Register</a> </li>
+      <li> <a href="{% url 'login_form' %}">Login</a> </li>
+      </ul>
+      <button id="open-menu-button"> <i class="uil uil-bars"></i> </button>
+      <button id="closed-menu-button"> <i class="uil uil-multiply"></i> </button>
+    </div>
+  </nav>
+
+  <section class="courses " >
+    <h2>Our Popular Courses</h2>
+    <div class="container courses__container">
+      <article class="course" >
+        <div class="course__image">
+        <img class="" src="{% static 'img/javascript.png' %}" alt="">
+        </div>
+        <div class="course__info">
+          <h4>JavaScript: The Advanced Concepts in 2022.</h4>
+          <p>Learn modern advanced JavaScript practices and be in the top 10% of JavaScript developers</p>
+          <a href="course.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+
+      <article class="course">
+        <div class="course__image">
+          <img class="" src="{% static 'img/django.jpg' %}" alt="">
+        </div>
+        <div class="course__info">
+          <h4>Python and Django Full Stack Web Developer Bootcamp</h4>
+          <p>Learn to build websites with HTML , CSS , Bootstrap , Javascript , jQuery , Python 3 , and Django!</p>
+          <a href="course.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+
+      <article class="course">
+        <div class="course__image">
+          <img class="" src="{% static 'img/python.jpg' %}" alt="">
+        </div>
+        <div class="course__info">
+          <h4>2022 Complete Python Bootcamp From Zero to Hero</h4>
+          <p>Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games</p>
+          <a href="course.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+
+      <article class="course">
+        <div class="course__image">
+          <img class="" src="{% static 'img/web-course.jpg' %}" alt="">
+        </div>
+        <div class="course__info">
+          <h4>The Complete 2022 Web Development Bootcamp</h4>
+          <p>Become a Full-Stack Web Designer in 2022 - Learn Everything from Web Design Fundamentals to Front-End Web Development
+          </p>
+          <a href="course.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+      <article class="course">
+        <div class="course__image">
+          <img class="" src="{% static 'img/react2.jpg' %}" alt="">
+        </div>
+        <div class="course__info">
+          <h4>Complete React JS Development in 2022 (w/ Redux, Hooks, GraphQL)</h4>
+          <p>Build enterprise level React applications and deploy to production</p>
+          <a href="course.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+      <article class="course">
+        <div class="course__image">
+          <img class="" src="{% static 'img/java.jpg' %}" alt="">
+        </div>
+        <div class="course__info">
+          <h4>Learn JAVA Programming - Beginner to Master</h4>
+          <p>Deep Dive in Core Java programming -Standard Edition. A Practical approach to learn Java. Become a Java Expert.</p>
+          <a href="course.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+      <article class="course">
+        <div class="course__image">
+          <img class="" src="{% static 'img/mysql.png' %}" alt="">
+        </div>
+        <div class="course__info">
+          <h4>The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert</h4>
+          <p>Become an In-demand SQL Master by creating complex databases and building reports through real-world projects</p>
+          <a href="course.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+      <article class="course">
+        <div class="course__image">
+          <img class="" src="{% static 'img/php.jpg' %}" alt="">
+        </div>
+        <div class="course__info">
+          <h4>PHP For Beginners - Learn PHP The Fastest And Easiest Way</h4>
+          <p>This PHP Course Teaches PHP From A- Z To The Beginners, The Fastest and Easiest Way With Real World Projects.</p>
+          <a href="course.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+      <article class="course">
+        <div class="course__image">
+          <img class="" src="{% static 'img/machine.jpg' %}" alt="">
+        </div>
+        <div class="course__info">
+          <h4>The Complete Machine Learning Course with Python</h4>
+          <p>Build a Portfolio of 12 Machine Learning Projects with Python, SVM, Regression, Unsupervised Machine Learning & More.</p>
+          <a href="course.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+      <article class="course">
+        <div class="course__image">
+          <img class="" src="{% static 'img/cloud.jpg' %}" alt="">
+        </div>
+        <div class="course__info">
+          <h4>Introduction to Cloud Computing on AWS for Beginners [2022]</h4>
+          <p>Learn Cloud Computing concepts and AWS Basics. Master AWS fundamentals and hands-on skills on Amazon Web Services (AWS).</p>
+          <a href="course.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+      <article class="course">
+        <div class="course__image">
+          <img class="" src="{% static 'img/datascience.jpg' %}" alt="">
+        </div>
+        <div class="course__info">
+          <h4>The Data Science Course 2022: Complete Data Science Bootcamp</h4>
+          <p>Complete Data Science Training: Mathematics, Statistics, Python, Advanced Statistics in Python, Machine & Deep Learning.</p>
+          <a href="course.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+      <article class="course">
+        <div class="course__image">
+          <img class="" src="{% static 'img/data-course.jpg' %}" alt="">
+        </div>
+        <div class="course__info">
+          <h4>Mastering Data Structures & Algorithms using C and C++</h4>
+          <p>Learn, Analyse and Implement Data Structure using C and C++. Learn Recursion and Sorting.</p>
+          <a href="course.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- END OF Courses -->
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="logo">
+          <img class="" src="{% static 'img/Avgamah-remove-bg.png' %}" alt="">
+          <p>Learn From The Best Educators with India's Largest Competitive Coding Site</p>
+        </div>
+    
+        <div class="footer__2">
+          <h4>Permalinks</h4>
+          <ul class="permalinks">
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="about.html">About Us</a> </li>
+            <li> <a href="courses.html">Courses</a> </li>
+            <li> <a href="contact.html">Contact Us</a> </li>
+          </ul>
+        </div>
+    
+        <div class="footer__3">
+          <h4>Primacy</h4>
+          <ul class="privacy">
+            <li> <a href="courses.html">Privacy Policy</a> </li>
+            <li> <a href="notes.html">Terms And Conditions</a> </li>
+            <li> <a href="competitive.html">Refund Policy</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer__4">
+          <h4>Contact Us</h4>
+          <div>
+            <p>+91 6289435632</p>
+            <p>sayakmalllickkv@gmail.com</p>
+          </div>
+          <ul class="footer__socials">
+            <li> <a href=""><i class="uil uil-facebook-f"></i></a> </li>
+            <li> <a href=""><i class="uil uil-instagram-alt"></i></a> </li>
+            <li> <a href=""><i class="uil uil-twitter"></i></a></li>
+            <li> <a href=""><i class="uil uil-linkedin-alt"></i></a></li>
+            <li> <a href=""><i class="uil uil-github-alt"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <small>Copyright &copy; AVGAMAH 2022 | All Rights Reserved</small>
+      </div>
+    </footer>
+
+
+  <!-- END OF FOOTER -->
+
+  <script type="text/javascript">
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').classList.toggle
+        ('window-scroll', window.scrollY > 0)
+    })
+
+    const faqs = document.querySelectorAll('.faq');
+
+    faqs.forEach(faq => {
+      faq.addEventListener('click', () => {
+        faq.classList.toggle('open');
+
+        const icon = faq.querySelector('.faq__icon i');
+        if (icon.className === 'uil uil-plus') {
+          icon.className = "uil uil-minus";
+        } else {
+          icon.className = "uil uil-plus";
+        }
+      })
+    })
+
+    // show/hide nav menu
+
+    const menu = document.querySelector(".nav__menu");
+    const menuBtn = document.querySelector("#open-menu-button");
+    const closeBtn = document.querySelector("#closed-menu-button");
+
+    menuBtn.addEventListener('click', () => {
+      menu.style.display = "flex";
+      closeBtn.style.display = "inline-block";
+      menuBtn.style.display = "none";
+    })
+
+    //close nav menu
+
+    const closeNav = () => {
+      menu.style.display = "none";
+      closeBtn.style.display = "none";
+      menuBtn.style.display = "inline-block";
+    }
+
+    closeBtn.addEventListener('click', closeNav)
+  </script>
+  <script src="main.js"></script>
+</body>
+
+</html>

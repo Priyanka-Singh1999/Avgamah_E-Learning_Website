@@ -1,0 +1,127 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% load crispy_forms_filters %}
+{% include 'nav.html' %}
+
+
+<!-- <link href="{% static 'css/kye.css' %}" rel="stylesheet"> -->
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+
+  body {
+    background: #1f2641;
+    margin: 15px;
+    margin-top:150px;
+    color: black;
+  }
+
+  .login-form,
+  .login-form * {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro';
+  }
+
+  .login-form {
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.15);
+  }
+
+  .login-form__logo-container {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.20);
+  }
+
+  .login-form__logo {
+    display: block;
+    max-width: 125px;
+    margin: 0 auto;
+  }
+
+  .login-form__content {
+    padding: 30px;
+    background: #eeeeee;
+  }
+
+  .login-form__header {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333333;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #dddddd;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.5s;
+  }
+
+  input:focus {
+    border-color: #6c63ff;
+  }
+
+  input::placeholder {
+    color: #aaaaaa;
+  }
+
+  .login-form__button {
+    padding: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    background: #6c63ff;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .login-form__button:active {
+    background: #008067;
+  }
+
+  .login-form__links {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .login-form__link {
+    font-size: 0.9em;
+    color: #008067;
+    text-decoration: none;
+  }
+
+</style>
+
+
+<body id="bg" style="background-image: url('{% static "img/bg-texture.png"%}');">
+      <form class="login-form"  method="post" novalidate>
+        {% csrf_token %}
+        <div class="login-form__logo-container">
+          <img class="logo" src="{% static 'img/Avgamah-remove-bg.png' %}" alt="">
+        </div>
+        <div class="login-form__content">
+          <div class="login-form__header">Sign Up For Students Dashboad</div>
+          <input class="" type="hidden" name="next" value="{{ next }}">
+          {{ form|crispy }}
+        <button class="login-form__button" type="submit">Sign Up</button>
+        </div>
+      </form>
+       <div class="card-footer">
+        <div class="d-flex justify-content-center">
+            <div class="messages">
+                {% for message in messages %}
+
+                    <a class="alert alert-success" style="color:red;"> {{ message }}</a>
+
+                {% endfor %}
+            </div>
+          </div>
+              </div>

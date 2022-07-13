@@ -1,0 +1,189 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avgamah | Learn From The Best</title>
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+  <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link href="{% static 'css/Avgamah_index.css' %}" rel="stylesheet">
+  <link href="{% static 'css/contact.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    body {
+      background-image: url("images/bg-texture.png");
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container nav__container">
+      <div class="logo">
+                        <img class="" src="{% static 'img/Avgamah-remove-bg.png' %}" alt="">
+      </div>
+      <ul class=" nav__menu">
+        <li> <a  href="{% url 'home' %}">Home</a></li>
+        <li> <a href="{% url 'about' %}">About Us</a> </li>
+        <li> <a href="{% url 'services' %}">Courses</a> </li>
+        <li> <a class="active" href="{% url 'contact' %}">Contact Us</a> </li>
+        <li> <a href="{% url 'lsign' %}">Register</a> </li>
+        <li> <a href="{% url 'login_form' %}">Login</a> </li>
+      </ul>
+      <button id="open-menu-button"> <i class="uil uil-bars"></i> </button>
+      <button id="closed-menu-button"> <i class="uil uil-multiply"></i> </button>
+    </div>
+  </nav>
+
+  <section class="contact">
+    <div class="container contact__container">
+      <aside class="contact__aside">
+        <div class="aside__image">
+          <img src="images/contact.svg" alt="">
+        </div>
+        <h2>Contact Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, odio.</p>
+        <ul class="contact__details">
+          <li>
+            <i class="uil uil-phone"></i>
+            <h5>+91 6289435632</h5>
+          </li>
+          <li>
+            <i class="uil uil-envelope"></i>
+            <h5>sayakmallickkv@gmail.com</h5>
+          </li>
+          <li>
+            <i class="uil uil-location-point"></i>
+            <h5>West Bengal, India</h5>
+          </li>
+        </ul>
+        <ul class="contact__socials">
+          <li>
+            <a href="#"><i class="uil uil-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="uil uil-twitter-alt"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="uil uil-github"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="uil uil-linkedin"></i></a>
+          </li>
+        </ul>
+      </aside>
+
+      <form action="https://formspree.io/f/mpzbbzro" method="post" class="contact__form">
+        <div class="form__name">
+          <input type="text" name="First Name" placeholder="First Name" required>
+          <input type="text" name="Last Name" placeholder="Last Name" required>
+        </div>
+        <input type="email" name="Email Address" placeholder="Your Email Address " required>
+        <textarea name="Message" id="" rows="7" placeholder=" Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="logo">
+        <img class="" src="{% static 'img/Avgamah-remove-bg.png' %}" alt="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, pariatur!</p>
+      </div>
+
+      <div class="footer__2">
+        <h4>Permalinks</h4>
+        <ul class="permalinks">
+          <li> <a href="index.html">Home</a></li>
+          <li> <a href="about.html">About Us</a> </li>
+          <li> <a href="courses.html">Courses</a> </li>
+          <li> <a href="courses.html">Contact</a> </li>
+        </ul>
+      </div>
+
+      <div class="footer__3">
+        <h4>Primacy</h4>
+        <ul class="privacy">
+          <li> <a href="courses.html">Privacy Policy</a> </li>
+          <li> <a href="notes.html">Terms And Conditions</a> </li>
+          <li> <a href="competitive.html">Refund Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__4">
+        <h4>Contact Us</h4>
+        <div>
+          <p>+91 6289435632</p>
+          <p>sayakmalllickkv@gmail.com</p>
+        </div>
+        <ul class="footer__socials">
+          <li> <a href=""><i class="uil uil-facebook-f"></i></a> </li>
+          <li> <a href=""><i class="uil uil-instagram-alt"></i></a> </li>
+          <li> <a href=""><i class="uil uil-twitter"></i></a></li>
+          <li> <a href=""><i class="uil uil-linkedin-alt"></i></a></li>
+          <li> <a href=""><i class="uil uil-github-alt"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <small>Copyright &copy; AVGAMAH</small>
+    </div>
+  </footer>
+
+  <!-- END OF FOOTER -->
+
+  <script type="text/javascript">
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').classList.toggle
+        ('window-scroll', window.scrollY > 0)
+    })
+
+    const faqs = document.querySelectorAll('.faq');
+
+    faqs.forEach(faq => {
+      faq.addEventListener('click', () => {
+        faq.classList.toggle('open');
+
+        const icon = faq.querySelector('.faq__icon i');
+        if (icon.className === 'uil uil-plus') {
+          icon.className = "uil uil-minus";
+        } else {
+          icon.className = "uil uil-plus";
+        }
+      })
+    })
+
+    // show/hide nav menu
+
+    const menu = document.querySelector(".nav__menu");
+    const menuBtn = document.querySelector("#open-menu-button");
+    const closeBtn = document.querySelector("#closed-menu-button");
+
+    menuBtn.addEventListener('click', () => {
+      menu.style.display = "flex";
+      closeBtn.style.display = "inline-block";
+      menuBtn.style.display = "none";
+    })
+
+    //close nav menu
+
+    const closeNav = () => {
+      menu.style.display = "none";
+      closeBtn.style.display = "none";
+      menuBtn.style.display = "inline-block";
+    }
+
+    closeBtn.addEventListener('click', closeNav)
+  </script>
+  <script src="main.js"></script>
+</body>
+
+</html>

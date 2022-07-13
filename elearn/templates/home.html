@@ -1,0 +1,502 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avgamah | Learn From The Best</title>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="{% static 'css/Avgamah_index.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7ea881dee5.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url("{% static 'img/bg-texture.png' %}");
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+
+    <style type="text/css">
+        .window-scroll {
+            background: var(--color-primary);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav style="animation-duration: 1.5s;" class="animate__animated animate__backInDown">
+        <div class="container nav__container">
+            <div class="logo">
+                <img class="" src="{% static 'img/Avgamah-remove-bg.png' %}" alt="">
+            </div>
+            <ul class=" nav__menu">
+                <li> <a class="active" href="{% url 'home' %}">Home</a></li>
+                <li> <a  href="{% url 'about' %}">About Us</a> </li>
+                <li> <a href="{% url 'services' %}">Courses</a> </li>
+                <li> <a href="{% url 'contact' %}">Contact Us</a> </li>
+                <li> <a href="{% url 'lsign' %}">Register</a> </li>
+                <li> <a href="{% url 'login_form' %}">Login</a> </li>
+            </ul>
+            <button id="open-menu-button"> <i class="uil uil-bars"></i> </button>
+            <button id="closed-menu-button"> <i class="uil uil-multiply"></i> </button>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container header__container">
+            <div style="animation-duration: 2s;" class="header__left animate__animated animate__fadeInLeft">
+                <h1 style="color: white">Learn From The Best Educators with India's Largest Competitive Coding Site</h1>
+                <br>
+                <h5>Being the Pro in Programming can be easy, especially if you start with us!</h5>
+                <br>
+                <a href="courses.html" class="btn btn-primary">Get Started</a>
+            </div>
+            <div style="animation-duration: 2s;" class="header__right animate__animated animate__fadeInRight">
+                <div class="header__right-image">
+                    <img class="" src="{% static 'img/header.svg' %}" class="img-style" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- END OF HEADER -->
+    <section class="categories">
+        <div class="container categories__container">
+            <div class="categories__left ">
+                <h1>Services We Offer.</h1>
+                <h5>We provide a variety of services for you to learn, thrive and also have fun!</h5>
+                <p>
+                Free Tutorials, Millions of Articles, Live, Online and Classroom Courses ,Frequent Coding Competitions ,Webinars by
+                Industry Experts, Internship opportunities and Job Opportunities.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div style="animation-duration: 3s; animation-delay: 2s;" class="categories__right animate__fadeInUp">
+                <article class="category ">
+                    <span class="category__icon"> <i class="fas fa-book-reader"></i> </span>
+                    <h5>Easy Learning</h5>
+                    <p>Our tutorials start from basic level and move all the way up to professional references.</p>
+                </article>
+                <article class="category">
+                    <span class="category__icon"> <i class="fas fa-hand-holding-usd"></i> </span>
+                    <h5>70% Free Content</h5>
+                    <p>We presents thousands of code examples for free.</p>
+                </article>
+                <article class="category">
+                    <span class="category__icon"> <i class="fas fa-code"></i> </span>
+                    <h5>IDE</h5>
+                    <p>Master the art of coding by testing and compiling your codes at our IDE platform.</p>
+                </article>
+
+                <article class="category">
+                    <span class="category__icon"><i class="fas fa-chalkboard-teacher"></i> </span>
+                    <h5>Best Teachers & Engaging Content</h5>
+                    <p>Students across regions can access the best teachers and see concepts
+                    come to life. Every detail of a student's journey is planned and executed at the deepest level with subject matter
+                    experts, teachers.</p>
+                </article>
+
+                <article class="category">
+                    <span class="category__icon"> <i class="fas fa-chalkboard"></i> </span>
+                    <h5>Technology Enabled Learning</h5>
+                    <p>We leverage technology to merge best practices like use of videos, engaging content and quizzes with the best teachers
+                    so that every child across the globe has access to the best learning experiences.</p>
+                </article>
+
+                <article class="category">
+                    <span class="category__icon"> <i class="fas fa-check-double"></i> </span>
+                    <h5>Doubt Clearing Sessions.</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, pariatur.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- END OF CATEGORIES  -->
+
+
+    <section class="courses">
+        <h2>Our Popular Courses</h2>
+        <div class="container courses__container">
+            <article class="course">
+                <div class="course__image">
+                    <img class="" src="{% static 'img/php.jpg' %}" alt="">
+                </div>
+                <div class="course__info">
+                    <h4>PHP For Beginners - Learn PHP The Fastest And Easiest Way</h4>
+                    <p>This PHP Course Teaches PHP From A- Z To The Beginners, The Fastest and Easiest Way With Real World Projects.
+                    </p>
+                    <a href="course.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </article>
+
+            <article class="course">
+                <div class="course__image">
+                    <img class="" src="{% static 'img/django.jpg' %}" alt="">
+                </div>
+                <div class="course__info">
+                    <h4>Python and Django Full Stack Web Developer Bootcamp</h4>
+                    <p>Learn to build websites with HTML , CSS , Bootstrap , Javascript , jQuery , Python 3 , and Django!</p>
+                    <a href="course.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </article>
+
+            <article class="course">
+                <div class="course__image">
+                    <img class="" src="{% static 'img/web-course.jpg' %}" alt="">
+                </div>
+                <div class="course__info">
+                    <h4>The Complete 2022 Web Development Bootcamp</h4>
+                    <p>Become a Full-Stack Web Designer in 2022 - Learn Everything from Web Design Fundamentals to Front-End Web Development</p>
+                    <a href="course.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- END OF Courses -->
+
+    <section class="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="container faqs__container">
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>Is AVGAMAH the best site for online learning ?</h4>
+                    <p>Online reviews of AVGAMAH are generally positive, with most users recommending it as a resource for beginners.</p>
+                </div>
+            </article>
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>How useful is AVGAMAH ?</h4>
+                    <p>AVGAMAH is an awesome resource for self-learners. It compiles the often scattered information about coding into
+                    clear and useful lessons. If you are a self-learner, AVGAMAH is a great place to start learning.</p>
+                </div>
+            </article>
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>Should I learn HTML or Python first ?</h4>
+                    <p>Overall, you should learn HTML before Python if you intend to make apps for the web because it is the fundamental
+                    building block for websites. However, for desktop or command line projects you won't use HTML so you can learn Python
+                    first.</p>
+                </div>
+            </article>
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>Should I learn Java or Python ?</h4>
+                    <p>Java is popular among programmers interested in web development, big data, cloud development, and Android app
+                    development. Python is favored by those working in back-end development, app development, data science, and machine
+                    learning.</p>
+                </div>
+            </article>
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>What is the fastest programming language ?</h4>
+                    <p>C++ is one of the most efficient and fastest languages. It is widely used by competitive programmers for its execution
+                    speed and standard template libraries(STL).</p>
+                </div>
+            </article>
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>What is the slowest coding language ?</h4>
+                    <p>The five slowest languages were all interpreted: Lua, Python, Perl, Ruby and Typescript. And the five languages which
+                    consumed the most energy were also interpreted: Perl, Python, Ruby, JRuby, and Lua.</p>
+                </div>
+            </article>
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>Is Python as powerful as C++ ?</h4>
+                    <p>The major advantage of C++ is performance. C++ performs efficiently and the speed is faster when compared to Python. C++
+                    is suitable for almost every platform including embedded systems whereas Python can be used only on certain platforms
+                    that support high-level languages.</p>
+                </div>
+            </article>
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>How long will it take to learn Python ?</h4>
+                    <p>In general, it takes around two to six months to learn the fundamentals of Python. But you can learn enough to write
+                    your first short program in a matter of minutes. Developing mastery of Python's vast array of libraries can take months
+                    or years.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- END OF FAQs -->
+
+    <section class="container testimonials__container swiper">
+        <h2>Students' Testimonials</h2>
+        <div class="swiper-wrapper">
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img class="" src="{% static 'img/avatar5.jpg' %}" alt="">
+                </div>
+                <div class="testimonial__info">
+                    <h2>Shivanshi Pillai</h2>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial__body">
+                    <p>Avgamah showed me that learning can be fun easy. With engaging lessons and interesting quizzes and experiments,
+                    Shivanshi’s confidence in studies and in life have soared.</p>
+                </div>
+            </article>
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                <img class="" src="{% static 'img/avatar4.jpg' %}" alt="">
+                </div>
+                <div class="testimonial__info">
+                    <h2>Sanika Sana</h2>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial__body">
+                    <p>I loves how personal attention from teachers and interactive lessons on the app has helped her enjoy studying. Not just
+                    that, her favourite part is where learning is fun and not a chore with all the quizzes on the app.
+                    </p>
+                </div>
+            </article>
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img class="" src="{% static 'img/avatar3.jpg' %}" alt="">
+                </div>
+                <div class="testimonial__info">
+                    <h2>Yatharth Pandey</h2>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial__body">
+                    <p>I expresses my gratitude to Avgamah for bringing excellent teachers into my life. I appreciates Avgamah study
+                    material for helping me to keep up with my studies.
+                    </p>
+                </div>
+            </article>
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img class="" src="{% static 'img/avatar2.jpg' %}" alt="">
+                </div>
+                <div class="testimonial__info">
+                    <h2>Deepak Kumar</h2>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial__body">
+                    <p>I thanks Avgamah for helping me to top my class and providing me with guidance at a time when schools were closed!
+                    </p>
+                </div>
+            </article>
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                <img class="" src="{% static 'img/avatar1.jpg' %}" alt="">
+                </div>
+                <div class="testimonial__info">
+                    <h2>Anushka Patel</h2>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial__body">
+                    <p>I loves Avgamah's fun and easy learning videos. I appreciates all my teachers for providing me with doubt-clearing sessions to
+                    practice and improve.
+                    </p>
+                </div>
+            </article>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </section>
+
+    <!-- END OF Testimonials -->
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="logo">
+            <img class="" src="{% static 'img/Avgamah-remove-bg.png' %}" alt="">
+                <p>Learn From The Best Educators with India's Largest Competitive Coding Site</p>
+            </div>
+
+            <div class="footer__2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="about.html">About Us</a> </li>
+                    <li> <a href="courses.html">Courses</a> </li>
+                    <li> <a href="contact.html">Contact Us</a> </li>
+                </ul>
+            </div>
+
+            <div class="footer__3">
+                <h4>Primacy</h4>
+                <ul class="privacy">
+                    <li> <a href="courses.html">Privacy Policy</a> </li>
+                    <li> <a href="notes.html">Terms And Conditions</a> </li>
+                    <li> <a href="competitive.html">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__4">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>+91 6289435632</p>
+                    <p>sayakmalllickkv@gmail.com</p>
+                </div>
+                <ul class="footer__socials">
+                    <li> <a href=""><i class="uil uil-facebook-f"></i></a> </li>
+                    <li> <a href=""><i class="uil uil-instagram-alt"></i></a> </li>
+                    <li> <a href=""><i class="uil uil-twitter"></i></a></li>
+                    <li> <a href=""><i class="uil uil-linkedin-alt"></i></a></li>
+                    <li> <a href=""><i class="uil uil-github-alt"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <small>Copyright &copy; AVGAMAH 2022 | All Rights Reserved</small>
+        </div>
+    </footer>
+
+    <!-- END OF FOOTER -->
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        /* ========
+    Debugger plugin, simple demo plugin to console.log some of callbacks
+    ======== */
+        function myPlugin({ swiper, extendParams, on }) {
+            extendParams({
+                debugger: false,
+            });
+
+            on('init', () => {
+                if (!swiper.params.debugger) return;
+                console.log('init');
+            });
+            on('click', (swiper, e) => {
+                if (!swiper.params.debugger) return;
+                console.log('click');
+            });
+            on('tap', (swiper, e) => {
+                if (!swiper.params.debugger) return;
+                console.log('tap');
+            });
+            on('doubleTap', (swiper, e) => {
+                if (!swiper.params.debugger) return;
+                console.log('doubleTap');
+            });
+            on('sliderMove', (swiper, e) => {
+                if (!swiper.params.debugger) return;
+                console.log('sliderMove');
+            });
+            on('slideChange', () => {
+                if (!swiper.params.debugger) return;
+                console.log(
+                    'slideChange',
+                    swiper.previousIndex,
+                    '->',
+                    swiper.activeIndex
+                );
+            });
+            on('slideChangeTransitionStart', () => {
+                if (!swiper.params.debugger) return;
+                console.log('slideChangeTransitionStart');
+            });
+            on('slideChangeTransitionEnd', () => {
+                if (!swiper.params.debugger) return;
+                console.log('slideChangeTransitionEnd');
+            });
+            on('transitionStart', () => {
+                if (!swiper.params.debugger) return;
+                console.log('transitionStart');
+            });
+            on('transitionEnd', () => {
+                if (!swiper.params.debugger) return;
+                console.log('transitionEnd');
+            });
+            on('fromEdge', () => {
+                if (!swiper.params.debugger) return;
+                console.log('fromEdge');
+            });
+            on('reachBeginning', () => {
+                if (!swiper.params.debugger) return;
+                console.log('reachBeginning');
+            });
+            on('reachEnd', () => {
+                if (!swiper.params.debugger) return;
+                console.log('reachEnd');
+            });
+        }
+    </script>
+
+    <script>
+        // Init Swiper
+        var swiper = new Swiper('.swiper', {
+            // Install Plugin To Swiper
+            modules: [myPlugin],
+            rewind: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // Enable debugger
+            debugger: true,
+        });
+    </script>
+    <script type="text/javascript">
+        window.addEventListener('scroll', () => {
+            document.querySelector('nav').classList.toggle
+                ('window-scroll', window.scrollY > 0)
+        })
+
+        const faqs = document.querySelectorAll('.faq');
+
+        faqs.forEach(faq => {
+            faq.addEventListener('click', () => {
+                faq.classList.toggle('open');
+
+                const icon = faq.querySelector('.faq__icon i');
+                if (icon.className === 'uil uil-plus') {
+                    icon.className = "uil uil-minus";
+                } else {
+                    icon.className = "uil uil-plus";
+                }
+            })
+        })
+
+        // show/hide nav menu
+
+            const menu = document.querySelector(".nav__menu");
+            const menuBtn = document.querySelector("#open-menu-button");
+            const closeBtn = document.querySelector("#closed-menu-button");
+
+            menuBtn.addEventListener('click', () => {
+                menu.style.display = "flex";
+                closeBtn.style.display = "inline-block";
+                menuBtn.style.display = "none";
+            })
+
+            //close nav menu
+
+            const closeNav = () => {
+                menu.style.display = "none";
+                closeBtn.style.display = "none";
+                menuBtn.style.display = "inline-block";
+            }
+
+            closeBtn.addEventListener('click', closeNav)
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
